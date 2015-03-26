@@ -2,10 +2,13 @@
 
 
 .link{
+
+  @include unstyled-link;
   color: $linkcolor;
+  &:hover{ color:$linkcolor + 100;}
 }
 
-.explore-link, .rentals-link, .account-link {
+.header-explore-link, .header-rentals-link, .header-account-link {
   @extend .link;
 }
 
@@ -13,33 +16,44 @@ body{
   background-color: $bgcolor;
 }
 
+.container{
+  width:50%;
+  margin: 0 auto;
+}
 
 
+@include breakpoint(max-width 2000px){
+  .container{
+    width:100%;
+  }
+  @include add-grid(10);
+}
 
 .header{
+
   width:auto;
   height:$header-height1;
   @include background-image(linear-gradient($headercolor, $bgcolor));
 }
 .logo{
   @include grid-span(1,2);
-  margin-top:50px;
+  margin-top:$header-logo-margin;
   min-width:$logo-max-width;
   min-height:$logo-max-height;
   max-width:$logo-max-width;
   max-height:$logo-max-height;
 
 }
-.explore-link{
-  margin-top:65px;
+.header-explore-link{
+  margin-top:$header-link-margin;
   @include grid-span(1,4);
 }
-.rentals-link{
-  margin-top:65px;
+.header-rentals-link{
+  margin-top:$header-link-margin;
   @include grid-span(1,5);
 }
-.account-link{
-  margin-top:65px;
+.header-account-link{
+  margin-top:$header-link-margin;
   @include grid-span(1,10);
 }
 
@@ -62,4 +76,23 @@ body{
   background-color: #19aebd;
   @include grid-span(6,2);
   height:800px;
+  @include add-grid(4);
+}
+
+.one-column-game{
+  background-color:red;
+  height: 200px;
+  @include grid-span(1,1);
+  @include add-gutter(1/4);
+  overflow: hidden;
+
+  position: relative;
+  img{
+    width:300px;
+    height:auto;
+    position:absolute;
+    left: -10px;
+
+  }
+
 }

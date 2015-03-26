@@ -10,16 +10,39 @@
 }
 
 /* line 4, ../sass/main.scss */
-.link, .explore-link, .rentals-link, .account-link {
+.link, .header-explore-link, .header-rentals-link, .header-account-link {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
   color: #19aebd;
 }
+/* line 6, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_unstyled-link.scss */
+.link:active, .header-explore-link:active, .header-rentals-link:active, .header-account-link:active, .link:focus, .header-explore-link:focus, .header-rentals-link:focus, .header-account-link:focus {
+  outline: none;
+}
+/* line 8, ../sass/main.scss */
+.link:hover, .header-explore-link:hover, .header-rentals-link:hover, .header-account-link:hover {
+  color: #7dffff;
+}
 
-/* line 12, ../sass/main.scss */
+/* line 15, ../sass/main.scss */
 body {
   background-color: #121917;
 }
 
 /* line 19, ../sass/main.scss */
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 2000px) {
+  /* line 26, ../sass/main.scss */
+  .container {
+    width: 100%;
+  }
+}
+/* line 32, ../sass/main.scss */
 .header {
   width: auto;
   height: 120px;
@@ -31,12 +54,12 @@ body {
   background-image: linear-gradient(#2d2f2f, #121917);
 }
 
-/* line 24, ../sass/main.scss */
+/* line 38, ../sass/main.scss */
 .logo {
-  width: 4.22535%;
+  width: 7.69231%;
   float: left;
   margin-right: -100%;
-  margin-left: 5.6338%;
+  margin-left: 10.25641%;
   clear: none;
   margin-top: 50px;
   min-width: 215px;
@@ -45,42 +68,42 @@ body {
   max-height: 55px;
 }
 
-/* line 33, ../sass/main.scss */
-.explore-link {
+/* line 47, ../sass/main.scss */
+.header-explore-link {
   margin-top: 65px;
-  width: 4.22535%;
+  width: 7.69231%;
   float: left;
   margin-right: -100%;
-  margin-left: 16.90141%;
+  margin-left: 30.76923%;
   clear: none;
 }
 
-/* line 37, ../sass/main.scss */
-.rentals-link {
+/* line 51, ../sass/main.scss */
+.header-rentals-link {
   margin-top: 65px;
-  width: 4.22535%;
+  width: 7.69231%;
   float: left;
   margin-right: -100%;
-  margin-left: 22.53521%;
+  margin-left: 41.02564%;
   clear: none;
 }
 
-/* line 41, ../sass/main.scss */
-.account-link {
+/* line 55, ../sass/main.scss */
+.header-account-link {
   margin-top: 65px;
-  width: 4.22535%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 50.70423%;
+  width: 7.69231%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
   clear: none;
 }
 
-/* line 46, ../sass/main.scss */
+/* line 60, ../sass/main.scss */
 .search-bar {
-  width: 26.76056%;
+  width: 48.71795%;
   float: left;
   margin-right: -100%;
-  margin-left: 5.6338%;
+  margin-left: 10.25641%;
   clear: none;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -95,23 +118,43 @@ body {
   color: #19aebd;
 }
 
-/* line 57, ../sass/main.scss */
+/* line 71, ../sass/main.scss */
 .recommendation-header {
-  width: 9.85915%;
+  width: 17.94872%;
   float: left;
   margin-right: -100%;
-  margin-left: 5.6338%;
+  margin-left: 10.25641%;
   clear: none;
   color: white;
 }
 
-/* line 61, ../sass/main.scss */
+/* line 75, ../sass/main.scss */
 .suggestions-container {
   background-color: #19aebd;
-  width: 32.39437%;
+  width: 58.97436%;
   float: left;
   margin-right: -100%;
-  margin-left: 5.6338%;
+  margin-left: 10.25641%;
   clear: none;
   height: 800px;
+}
+
+/* line 82, ../sass/main.scss */
+.one-column-game {
+  background-color: red;
+  height: 200px;
+  width: 20%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+  overflow: hidden;
+  position: relative;
+}
+/* line 90, ../sass/main.scss */
+.one-column-game img {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  left: -10px;
 }
