@@ -1,1 +1,65 @@
 @import 'base';
+
+
+.link{
+  color: $linkcolor;
+}
+
+.explore-link, .rentals-link, .account-link {
+  @extend .link;
+}
+
+body{
+  background-color: $bgcolor;
+}
+
+
+
+
+.header{
+  width:auto;
+  height:$header-height1;
+  @include background-image(linear-gradient($headercolor, $bgcolor));
+}
+.logo{
+  @include grid-span(1,2);
+  margin-top:50px;
+  min-width:$logo-max-width;
+  min-height:$logo-max-height;
+  max-width:$logo-max-width;
+  max-height:$logo-max-height;
+
+}
+.explore-link{
+  margin-top:65px;
+  @include grid-span(1,4);
+}
+.rentals-link{
+  margin-top:65px;
+  @include grid-span(1,5);
+}
+.account-link{
+  margin-top:65px;
+  @include grid-span(1,10);
+}
+
+.search-bar{
+  @include grid-span(5,2);
+  @include border-radius(5px);
+  border-style: solid;
+  border-width: 2px;
+  border-color:$bordercolor;
+  background:$bgcolor;
+  padding: 9px;
+  @include opacity(0.5);
+  color:$fontcolor;
+}
+.recommendation-header{
+  @include grid-span(2,2);
+  color:white;
+}
+.suggestions-container{
+  background-color: #19aebd;
+  @include grid-span(6,2);
+  height:800px;
+}
